@@ -41,21 +41,15 @@ public:
         Iterator(); // abstract base class
     };
 
-    // A shortcut that can be used to successively remove each of
-    // the entries in the table (e.g., so that their values can be
-    // deleted, if they happen to be pointers to allocated memory).
     void* RemoveNext();
 
     // Returns the first entry in the table.
-    // (This is useful for deleting each entry in the table, if the entry's destructor also removes itself from the table.)
     void* getFirst();
 
 protected:
     HashTable(); // abstract base class
 };
 
-// Warning: The following are deliberately the same as in
-// Tcl's hash table implementation
 int const STRING_HASH_KEYS = 0;
 int const ONE_WORD_HASH_KEYS = 1;
 

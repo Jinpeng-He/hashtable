@@ -8,19 +8,24 @@
 
 
 #define SMALL_HASH_TABLE_SIZE 4
+typedef unsigned uintptr_t;
+
+
 
 class BasicHashTable: public HashTable
 {
+
 private:
     class TableEntry; // forward
 
 public:
+	
     BasicHashTable(int keyType);
     virtual ~BasicHashTable();
 
     // Used to iterate through the members of the table:
     class Iterator;
-    friend class Iterator; // to make Sun's C++ compiler happy
+    friend class Iterator;
     class Iterator: public HashTable::Iterator
     {
     public:
