@@ -1,4 +1,5 @@
 #include <BasicHashTable.h>
+#include <strDup.h>
 #include <stddef.h>
 #include <string.h>
 #include <stdio.h>
